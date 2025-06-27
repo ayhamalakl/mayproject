@@ -62,6 +62,11 @@
     border-color: #397762;
     box-shadow: 0 0 0 3px rgba(57, 119, 98, 0.1);
 }
+#coloor{
+    
+    background-color: #3D8393;
+    color:#E7EFC7;
+}
 
 .form-group select {
     appearance: none;
