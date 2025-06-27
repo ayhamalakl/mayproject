@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>أضف إعلانك - Syrian Store</title>
+    <link rel="stylesheet" href="add-ad-style.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="logo">Syrian Store</a>
+            <div class="nav-search">
+                <input type="text" placeholder="ابحث عن طلبك...">
+            <img class="search-btn" src="image/Group 2667.svg" alt="icon">
+            </div>
+            <div class="nav-buttons">
+                <a href="add-ad.html" class="nav-btn add-ad-btn">أضف إعلانك</a>
+                <a href="join-us.html" class="nav-btn join-btn" id="coloor">انضم إلينا</a>
+                <a href="account.html" class="nav-btn account-btn">حسابي</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        الرئيسية > الحساب الشخصي > <span id="current-section">معلومات الحساب</span>
+    </div>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h3>الحساب الشخصي</h3>
+            </div>
+            <ul class="sidebar-menu">
+                <li class="active" data-section="info">معلومات الحساب</li>
+                <li data-section="ads">إعلاناتي</li>
+                <li data-section="settings">الإعدادات</li>
+                <li data-section="messages">الرسائل</li>
+                <li data-section="logout">تسجيل الخروج</li>
+            </ul>
+        </aside>
+
+        <section class="content-area">
+            <!-- Information Section -->
+            <div id="info-section" class="content-section active">
+                <h2>مرحباً، أحمد محمد</h2>
+                <p>مرحباً في حسابك. يمكنك هنا مراجعة وإدارة معلوماتك الشخصية وإعلاناتك.</p>
+                <div class="user-profile">
+                    <div class="profile-image">
+                        <!-- Placeholder for user image -->
+                        <img src="https://via.placeholder.com/150" alt="User Profile Picture">
+                    </div>
+                    <div class="profile-details">
+                        <div class="detail-item">
+                            <label>اسم المستخدم:</label>
+                            <span>ahmod21</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>الاسم الكامل:</label>
+                            <span>احمد محمد</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>رقم الهاتف:</label>
+                            <span>0966445211</span>
+                        </div>
+                        <div class="detail-item">
+                            <label>البريد الإلكتروني:</label>
+                            <span>ahmod21@gmail.com</span>
+                        </div>
+                    </div>
+                </div>
+                <button class="edit-btn">تعديل</button>
+            </div>
+
+            <!-- My Ads Section -->
+            <div id="ads-section" class="content-section">
+                <h2>إعلاناتي</h2>
+                <div class="ads-table">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>العنوان</th>
+                                <th>الحالة</th>
+                                <th>السعر</th>
+                                <th>التاريخ</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td>Land Cruiser 300</td>
+                                <td>نشط</td>
+                                <td>162,000 $</td>
+                                <td>2025-04-01</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>طقم ولادي</td>
+                                <td>منتهي</td>
+                                <td>24 $</td>
+                                <td>2025-03-25</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>شقة للإيجار</td>
+                                <td>معلق</td>
+                                <td>30,000 $</td>
+                                <td>2025-03-20</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Settings Section -->
+            <div id="settings-section" class="content-section">
+                <h2>إعدادات الحساب</h2>
+                <div class="settings-form">
+                    <div class="form-group">
+                        <label for="language">اللغة:</label>
+                        <select id="language">
+                            <option value="ar">عربي</option>
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="currency">نوع العملة:</label>
+                        <select id="currency">
+                            <option value="syp">ليرة سورية</option>
+                            <option value="usd">دولار أمريكي</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>تفعيل الإشعارات:</label>
+                        <div class="checkbox-group">
+                            <input type="checkbox" id="system-updates">
+                            <label for="system-updates">تحديثات نظام</label>
+                            <input type="checkbox" id="new-offers">
+                            <label for="new-offers">عروض جديدة</label>
+                            <input type="checkbox" id="messages">
+                            <label for="messages">الرسائل الجديدة</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Messages Section -->
+            <div id="messages-section" class="content-section">
+                <h2>الرسائل</h2>
+                <div class="no-messages">
+                    <p>لا توجد رسائل غير مقروءة حالياً.</p>
+                    <p>ستظهر الرسائل التي تتلقاها من المستخدمين أو النظام هنا.</p>
+                </div>
+            </div>
+
+            <!-- Logout Section (handled by JavaScript) -->
+            <div id="logout-section" class="content-section">
+                <h2>تسجيل الخروج</h2>
+                <p>هل أنت متأكد أنك تريد تسجيل الخروج؟</p>
+                <button class="logout-confirm-btn">تأكيد تسجيل الخروج</button>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Syrian Store</h3>
+                <p>منصة إلكترونية شاملة لبيع وشراء العقارات</p>
+                <p>الأدوات الشرائية والخدمات في سوريا</p>
+                <p>تصميم وتطوير لتجربة مستخدم سهلة وآمنة</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">الفئات</a></li>
+                    <li><a href="#">المتجر</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">إتصل بنا</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>سياسة الخصوصية</h4>
+                <ul>
+                    <li><a href="#">سياسة الخصوصية</a></li>
+                    <li><a href="#">شروط الإستخدام</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-section">
+                <h4>تابعنا</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>جميع الحقوق محفوظة Syrian Store. © 2025</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const sidebarItems = document.querySelectorAll(".sidebar-menu li");
+            const contentSections = document.querySelectorAll(".content-section");
+            const currentSectionSpan = document.getElementById("current-section");
+
+            sidebarItems.forEach(item => {
+                item.addEventListener("click", function() {
+                    // Remove active class from all sidebar items and content sections
+                    sidebarItems.forEach(li => li.classList.remove("active"));
+                    contentSections.forEach(section => section.classList.remove("active"));
+
+                    // Add active class to the clicked sidebar item
+                    this.classList.add("active");
+
+                    // Show the corresponding content section
+                    const sectionId = this.dataset.section + "-section";
+                    document.getElementById(sectionId).classList.add("active");
+
+                    // Update breadcrumb
+                    currentSectionSpan.textContent = this.textContent;
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+

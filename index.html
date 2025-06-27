@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Syrian Store - متجر العقارات السوري</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <h2>Syrian Store</h2>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="ابحث عن طلبك..." class="search-input">
+                <img class="search-btn" src="image/Group 2667.svg" alt="icon">
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <a href="add-ad.html" class="nav-btn add-ad-btn">أضف إعلانك</a>
+                <a href="join-us.html" class="nav-btn join-btn" id="coloor">انضم إلينا</a>
+                <a href="account.html" class="nav-btn account-btn">حسابي</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1>اختر العقار الذي يناسب موقعك</h1>
+                <p>منصة إلكترونية شاملة لبيع وشراء العقارات</p>
+                <p>الأدوات الشرائية والخدمات في سوريا</p>
+                <p>تصميم وتطوير لتجربة مستخدم سهلة وآمنة</p>
+                <button class="hero-btn">هيا بنا</button>
+            </div>
+            <div class="hero-image">
+                <div class="placeholder-image">صورة العقار الرئيسية</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advanced Search Section -->
+    <section class="search-section">
+        <div class="search-filters">
+            <div class="filter-group">
+                <label>ابحث عن طلبك</label>
+                <input type="text" placeholder="ابحث عن طلبك..." class="filter-input">
+            </div>
+            
+            <div class="filter-group">
+                <label>جميع المحافظات</label>
+                <select class="filter-select">
+                    <option value="">جميع المحافظات</option>
+                    <option value="damascus">دمشق</option>
+                    <option value="aleppo">حلب</option>
+                    <option value="homs">حمص</option>
+                    <option value="hama">حماة</option>
+                    <option value="lattakia">اللاذقية</option>
+                    <option value="tartous">طرطوس</option>
+                    <option value="idlib">إدلب</option>
+                    <option value="daraa">درعا</option>
+                    <option value="sweida">السويداء</option>
+                    <option value="quneitra">القنيطرة</option>
+                    <option value="deir-ez-zor">دير الزور</option>
+                    <option value="raqqa">الرقة</option>
+                    <option value="hasaka">الحسكة</option>
+                    <option value="rif-damascus">ريف دمشق</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>النوع</label>
+                <select class="filter-select">
+                    <option value="">النوع</option>
+                    <option value="new">جديد</option>
+                    <option value="used">مستعمل</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>نوع العقار</label>
+                <select class="filter-select">
+                    <option value="">نوع العقار</option>
+                    <option value="land">أرض</option>
+                    <option value="apartment">شقة</option>
+                    <option value="villa">فيلا</option>
+                    <option value="office">مكتب</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>أدنى سعر</label>
+                <select class="filter-select">
+                    <option value="">أدنى سعر</option>
+                    <option value="50000">50,000 ل.س</option>
+                    <option value="100000">100,000 ل.س</option>
+                    <option value="500000">500,000 ل.س</option>
+                    <option value="1000000">1,000,000 ل.س</option>
+                </select>
+            </div>
+            
+            <div class="filter-group">
+                <label>أقصى سعر</label>
+                <select class="filter-select">
+                    <option value="">أقصى سعر</option>
+                    <option value="1000000">1,000,000 ل.س</option>
+                    <option value="5000000">5,000,000 ل.س</option>
+                    <option value="10000000">10,000,000 ل.س</option>
+                    <option value="50000000">50,000,000 ل.س</option>
+                </select>
+            </div>
+        </div>
+    </section>
+
+    <!-- Properties Section -->
+    <section class="properties">
+        <h2 class="section-title">العقارات</h2>
+        <div class="properties-grid">
+            <!-- Property Card 1 -->
+            <div class="property-card">
+                <div class="property-image">قصر فاخر</div>
+                <div class="property-info">
+                    <h3>قصر فاخر</h3>
+                  <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 2 -->
+            <div class="property-card">
+                <div class="property-image">أرض للبيع</div>
+                <div class="property-info">
+                    <h3>أرض للبيع</h3>
+                   <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 3 -->
+            <div class="property-card">
+                <div class="property-image">فيلا طابقين</div>
+                <div class="property-info">
+                    <h3>فيلا طابقين</h3>
+                 <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 4 -->
+            <div class="property-card">
+                <div class="property-image">شقة عربية</div>
+                <div class="property-info">
+                    <h3>شقة عربية</h3>
+                <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 5 -->
+            <div class="property-card">
+                <div class="property-image">دار عربية</div>
+                <div class="property-info">
+                    <h3>دار عربية</h3>
+               <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 6 -->
+            <div class="property-card">
+                <div class="property-image">مكتب هندسي</div>
+                <div class="property-info">
+                    <h3>مكتب هندسي</h3>
+                 <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 7 -->
+            <div class="property-card">
+                <div class="property-image">فيلا فاخرة</div>
+                <div class="property-info">
+                    <h3>فيلا فاخرة</h3>
+                  <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 8 -->
+            <div class="property-card">
+                <div class="property-image">محضر أرض</div>
+                <div class="property-info">
+                    <h3>محضر أرض</h3>
+               <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 9 -->
+            <div class="property-card">
+                <div class="property-image">فيلا طابقين + حوش</div>
+                <div class="property-info">
+                    <h3>فيلا طابقين + حوش</h3>
+               <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 10 -->
+            <div class="property-card">
+                <div class="property-image">دار عربية</div>
+                <div class="property-info">
+                    <h3>دار عربية</h3>
+               <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 11 -->
+            <div class="property-card">
+                <div class="property-image">محضر أرض</div>
+                <div class="property-info">
+                    <h3>محضر أرض</h3>
+               <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+
+            <!-- Property Card 12 -->
+            <div class="property-card">
+                <div class="property-image">فيلا فاخرة</div>
+                <div class="property-info">
+                    <h3>فيلا فاخرة</h3>
+                  <a href="property-details.html" class="details-btn">عرض التفاصيل</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Syrian Store</h3>
+                <p>منصة إلكترونية شاملة لبيع وشراء العقارات</p>
+                <p>الأدوات الشرائية والخدمات في سوريا</p>
+                <p>تصميم وتطوير لتجربة مستخدم سهلة وآمنة</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">الفئات</a></li>
+                    <li><a href="#">المميز</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>سياسة الخصوصية</h4>
+                <p>شروط الاستخدام</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>تابعنا</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Syria Store. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+</body>
+</html>
+
+

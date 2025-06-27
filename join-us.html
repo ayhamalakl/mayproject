@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>انضم إلينا - Syrian Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="join-us-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <!-- Logo -->
+            <div class="logo">
+                <h2>Syrian Store</h2>
+            </div>
+            
+            <!-- Search Bar -->
+            <div class="search-container">
+                <input type="text" placeholder="ابحث عن طلبك..." class="search-input">
+                <button class="search-btn">🔍</button>
+            </div>
+            
+            <!-- Navigation Buttons -->
+            <div class="nav-buttons">
+                <button class="nav-btn add-ad-btn">أضف إعلانك</button>
+                <a href="join-us.html" class="nav-btn join-btn">انضم إلينا</a>
+                <a href="account.html" class="nav-btn account-btn">حسابي</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="form-card">
+            <h2>إضافة منتج جديد</h2>
+            <form>
+                <div class="form-group">
+                    <label for="product-title">عنوان المنتج</label>
+                    <input type="text" id="product-title" placeholder="مثال: أريكة للبيع">
+                </div>
+                <div class="form-group">
+                    <label for="category">التصنيف</label>
+                    <select id="category">
+                        <option value="">اختر فئة</option>
+                        <option value="apartments">شقق</option>
+                        <option value="villas">فلل</option>
+                        <option value="lands">أراضي</option>
+                        <option value="offices">مكاتب</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="price">السعر(دولار)</label>
+                    <input type="number" id="price">
+                </div>
+                <div class="form-group-inline">
+                    <div class="form-group">
+                        <label for="city">المدينة</label>
+                        <select id="city">
+                            <option value="">جميع المحافظات</option>
+                            <option value="damascus">دمشق</option>
+                            <option value="aleppo">حلب</option>
+                            <option value="homs">حمص</option>
+                            <option value="hama">حماة</option>
+                            <option value="lattakia">اللاذقية</option>
+                            <option value="tartous">طرطوس</option>
+                            <option value="idlib">إدلب</option>
+                            <option value="daraa">درعا</option>
+                            <option value="sweida">السويداء</option>
+                            <option value="quneitra">القنيطرة</option>
+                            <option value="deir-ez-zor">دير الزور</option>
+                            <option value="raqqa">الرقة</option>
+                            <option value="hasaka">الحسكة</option>
+                            <option value="rif-damascus">ريف دمشق</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="area">المنطقة(الحي)</label>
+                        <input type="text" id="area">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="description">وصف المنتج</label>
+                    <textarea id="description" rows="5"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="product-images">صور المنتج</label>
+                    <div class="image-upload-box">
+                        <p>اسحب وأفلت الصور هنا أو انقر للتحميل</p>
+                        <input type="file" id="product-images" multiple accept="image/*">
+                    </div>
+                </div>
+                <button type="submit" class="submit-btn">نشر المنتج</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>Syrian Store</h3>
+                <p>منصة إلكترونية شاملة لبيع وشراء العقارات</p>
+                <p>الأدوات الشرائية والخدمات في سوريا</p>
+                <p>تصميم وتطوير لتجربة مستخدم سهلة وآمنة</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>روابط سريعة</h4>
+                <ul>
+                    <li><a href="#">الرئيسية</a></li>
+                    <li><a href="#">الفئات</a></li>
+                    <li><a href="#">المميز</a></li>
+                    <li><a href="#">من نحن</a></li>
+                    <li><a href="#">اتصل بنا</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-section">
+                <h4>سياسة الخصوصية</h4>
+                <p>شروط الاستخدام</p>
+            </div>
+            
+            <div class="footer-section">
+                <h4>تابعنا</h4>
+                <div class="social-icons">
+                    <a href="#" class="social-icon"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="social-icon"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="footer-bottom">
+            <p>© 2025 Syria Store. جميع الحقوق محفوظة</p>
+        </div>
+    </footer>
+</body>
+</html>
+
