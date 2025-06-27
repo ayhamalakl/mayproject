@@ -171,7 +171,6 @@ body {
     border-bottom: 1px solid #e9ecef;
     position: relative;
     z-index: 1;
-  margin-bottom: 0cqmax;
 }
 
 .search-filters {
@@ -421,20 +420,18 @@ body {
     background-color: #397762;
     color: white;
     padding: 3rem 0 1rem;
+    direction: rtl;
+  
 }
 
 .footer-container {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
     padding: 0 2rem;
     align-items: start;
-}
-
-.footer-section:first-child {
-    text-align: right;
 }
 
 .footer-section h3 {
@@ -458,22 +455,33 @@ body {
     font-size: 0.9rem;
 }
 
-.footer-section ul {
+.footer-section p a {
+    color: white;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section p a:hover {
+    color: #E7EFC7;
+}
+
+.footer-links {
     list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
 }
 
-.footer-section ul li {
-    margin-bottom: 0.5rem;
-}
-
-.footer-section ul li a {
+.footer-links li a {
     color: white;
     text-decoration: none;
     transition: color 0.3s ease;
     font-size: 0.9rem;
 }
 
-.footer-section ul li a:hover {
+.footer-links li a:hover {
     color: #E7EFC7;
 }
 
@@ -493,7 +501,7 @@ body {
     line-height: 40px;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 1.2rem; /* هذا سيطبق على أيقونات Font Awesome */
+    font-size: 1.2rem;
     transition: all 0.3s ease;
 }
 
@@ -510,6 +518,7 @@ body {
     color: white;
     font-size: 0.9rem;
 }
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
