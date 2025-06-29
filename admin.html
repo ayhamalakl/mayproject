@@ -16,114 +16,623 @@
             </div>
             <nav class="main-nav">
                 <ul>
-                    <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> لوحة القيادة</a></li>
-                    <li><a href="#users"><i class="fas fa-users"></i> إدارة المستخدمين</a></li>
-                    <li><a href="#properties"><i class="fas fa-building"></i> إدارة العقارات</a></li>
-                    <li><a href="#ads"><i class="fas fa-ad"></i> إدارة الإعلانات</a></li>
-                    <li><a href="#settings"><i class="fas fa-cogs"></i> الإعدادات</a></li>
-                    <li><a href="#reports"><i class="fas fa-chart-line"></i> التقارير</a></li>
+                    <li><a href="#" onclick="showSection('dashboard')" class="nav-link active"><i class="fas fa-tachometer-alt"></i> لوحة القيادة</a></li>
+                    <li><a href="#" onclick="showSection('users')" class="nav-link"><i class="fas fa-users"></i> إدارة المستخدمين</a></li>
+                    <li><a href="#" onclick="showSection('properties')" class="nav-link"><i class="fas fa-building"></i> إدارة العقارات</a></li>
+                    <li><a href="#" onclick="showSection('ads')" class="nav-link"><i class="fas fa-ad"></i> إدارة الإعلانات</a></li>
+                    <li><a href="#" onclick="showSection('dynamic-fields')" class="nav-link"><i class="fas fa-edit"></i> الحقول الديناميكية</a></li>
+                    <li><a href="#" onclick="showSection('settings')" class="nav-link"><i class="fas fa-cogs"></i> الإعدادات</a></li>
+                    <li><a href="#" onclick="showSection('reports')" class="nav-link"><i class="fas fa-chart-line"></i> التقارير</a></li>
                 </ul>
             </nav>
         </aside>
+        
         <main class="main-content">
             <header class="admin-header">
-                <h1>لوحة القيادة</h1>
+                <h1 id="page-title">لوحة القيادة</h1>
                 <div class="user-info">
                     <span>مرحباً، المسؤول</span>
                     <i class="fas fa-user-circle"></i>
                 </div>
             </header>
-            <section class="dashboard-cards">
-                <div class="card">
-                    <h3>إجمالي المستخدمين</h3>
-                    <p>1,234</p>
-                </div>
-                <div class="card">
-                    <h3>العقارات النشطة</h3>
-                    <p>567</p>
-                </div>
-                <div class="card">
-                    <h3>الإعلانات المعلقة</h3>
-                    <p>89</p>
-                </div>
-                <div class="card">
-                    <h3>الزيارات اليومية</h3>
-                    <p>12,345</p>
-                </div>
-            </section>
-            <section class="recent-activity">
-                <h2>النشاطات الأخيرة</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>النوع</th>
-                            <th>الوصف</th>
-                            <th>التاريخ</th>
-                            <th>الإجراءات</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>تسجيل جديد</td>
-                            <td>تم تسجيل مستخدم جديد: أحمد محمد</td>
-                            <td>2025-06-29</td>
-                            <td><button class="btn-view">عرض</button></td>
-                        </tr>
-                        <tr>
-                            <td>إعلان جديد</td>
-                            <td>تم إضافة عقار جديد: شقة في دمشق</td>
-                            <td>2025-06-29</td>
-                            <td><button class="btn-approve">موافقة</button> <button class="btn-reject">رفض</button></td>
-                        </tr>
-                        <tr>
-                            <td>تحديث عقار</td>
-                            <td>تم تحديث عقار: فيلا في حلب</td>
-                            <td>2025-06-28</td>
-                            <td><button class="btn-view">عرض</button></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
-            
-            <section class="management-sections">
-                <div class="section-card">
-                    <h3><i class="fas fa-users"></i> إدارة المستخدمين</h3>
-                    <p>إدارة حسابات المستخدمين والصلاحيات</p>
-                    <div class="quick-actions">
-                        <button class="btn-primary">إضافة مستخدم</button>
-                        <button class="btn-secondary">عرض الكل</button>
+
+            <!-- لوحة القيادة -->
+            <div id="dashboard-section" class="content-section active">
+                <section class="dashboard-cards">
+                    <div class="card">
+                        <h3>إجمالي المستخدمين</h3>
+                        <p>1,234</p>
                     </div>
-                </div>
+                    <div class="card">
+                        <h3>العقارات النشطة</h3>
+                        <p>567</p>
+                    </div>
+                    <div class="card">
+                        <h3>الإعلانات المعلقة</h3>
+                        <p>89</p>
+                    </div>
+                    <div class="card">
+                        <h3>الزيارات اليومية</h3>
+                        <p>12,345</p>
+                    </div>
+                </section>
                 
-                <div class="section-card">
-                    <h3><i class="fas fa-building"></i> إدارة العقارات</h3>
-                    <p>إدارة العقارات والإعلانات المنشورة</p>
-                    <div class="quick-actions">
-                        <button class="btn-primary">إضافة عقار</button>
-                        <button class="btn-secondary">عرض الكل</button>
+                <section class="recent-activity">
+                    <h2>النشاطات الأخيرة</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>النوع</th>
+                                <th>الوصف</th>
+                                <th>التاريخ</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>تسجيل جديد</td>
+                                <td>تم تسجيل مستخدم جديد: أحمد محمد</td>
+                                <td>2025-06-29</td>
+                                <td><button class="btn-view">عرض</button></td>
+                            </tr>
+                            <tr>
+                                <td>إعلان جديد</td>
+                                <td>تم إضافة عقار جديد: شقة في دمشق</td>
+                                <td>2025-06-29</td>
+                                <td><button class="btn-approve">موافقة</button> <button class="btn-reject">رفض</button></td>
+                            </tr>
+                            <tr>
+                                <td>تحديث عقار</td>
+                                <td>تم تحديث عقار: فيلا في حلب</td>
+                                <td>2025-06-28</td>
+                                <td><button class="btn-view">عرض</button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+
+            <!-- إدارة المستخدمين -->
+            <div id="users-section" class="content-section">
+                <div class="section-header">
+                    <h2>إدارة المستخدمين</h2>
+                    <button class="btn-primary" onclick="openModal('add-user-modal')">
+                        <i class="fas fa-plus"></i> إضافة مستخدم جديد
+                    </button>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="tab-btn active" onclick="filterUsers('all')">جميع المستخدمين</button>
+                    <button class="tab-btn" onclick="filterUsers('admin')">المدراء</button>
+                    <button class="tab-btn" onclick="filterUsers('user')">المستخدمين العاديين</button>
+                    <button class="tab-btn" onclick="filterUsers('blocked')">المحظورين</button>
+                </div>
+
+                <div class="users-table-container">
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>الاسم</th>
+                                <th>البريد الإلكتروني</th>
+                                <th>نوع الحساب</th>
+                                <th>تاريخ التسجيل</th>
+                                <th>الحالة</th>
+                                <th>الإجراءات</th>
+                            </tr>
+                        </thead>
+                        <tbody id="users-tbody">
+                            <tr>
+                                <td>أحمد محمد</td>
+                                <td>ahmed@example.com</td>
+                                <td><span class="badge badge-admin">مدير</span></td>
+                                <td>2025-06-01</td>
+                                <td><span class="status-active">نشط</span></td>
+                                <td>
+                                    <button class="btn-action btn-edit" onclick="editUser(1)"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action btn-view" onclick="viewUser(1)"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action btn-delete" onclick="deleteUser(1)"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>فاطمة علي</td>
+                                <td>fatima@example.com</td>
+                                <td><span class="badge badge-user">مستخدم</span></td>
+                                <td>2025-06-15</td>
+                                <td><span class="status-active">نشط</span></td>
+                                <td>
+                                    <button class="btn-action btn-edit" onclick="editUser(2)"><i class="fas fa-edit"></i></button>
+                                    <button class="btn-action btn-view" onclick="viewUser(2)"><i class="fas fa-eye"></i></button>
+                                    <button class="btn-action btn-delete" onclick="deleteUser(2)"><i class="fas fa-trash"></i></button>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- إدارة العقارات -->
+            <div id="properties-section" class="content-section">
+                <div class="section-header">
+                    <h2>إدارة العقارات</h2>
+                    <button class="btn-primary" onclick="openModal('add-property-modal')">
+                        <i class="fas fa-plus"></i> إضافة عقار جديد
+                    </button>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="tab-btn active" onclick="filterProperties('all')">جميع العقارات</button>
+                    <button class="tab-btn" onclick="filterProperties('active')">النشطة</button>
+                    <button class="tab-btn" onclick="filterProperties('sold')">المباعة</button>
+                    <button class="tab-btn" onclick="filterProperties('rented')">المؤجرة</button>
+                </div>
+
+                <div class="properties-grid" id="properties-grid">
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://via.placeholder.com/300x200" alt="شقة في دمشق">
+                            <div class="property-status status-active">نشط</div>
+                        </div>
+                        <div class="property-info">
+                            <h3>شقة في دمشق</h3>
+                            <p class="property-price">500,000 ليرة سورية</p>
+                            <p class="property-details">3 غرف نوم • 2 حمام • 120 متر مربع</p>
+                            <div class="property-actions">
+                                <button class="btn-action btn-edit" onclick="editProperty(1)"><i class="fas fa-edit"></i></button>
+                                <button class="btn-action btn-view" onclick="viewProperty(1)"><i class="fas fa-eye"></i></button>
+                                <button class="btn-action btn-delete" onclick="deleteProperty(1)"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="property-card">
+                        <div class="property-image">
+                            <img src="https://via.placeholder.com/300x200" alt="فيلا في حلب">
+                            <div class="property-status status-sold">مباع</div>
+                        </div>
+                        <div class="property-info">
+                            <h3>فيلا في حلب</h3>
+                            <p class="property-price">1,200,000 ليرة سورية</p>
+                            <p class="property-details">5 غرف نوم • 3 حمام • 250 متر مربع</p>
+                            <div class="property-actions">
+                                <button class="btn-action btn-edit" onclick="editProperty(2)"><i class="fas fa-edit"></i></button>
+                                <button class="btn-action btn-view" onclick="viewProperty(2)"><i class="fas fa-eye"></i></button>
+                                <button class="btn-action btn-delete" onclick="deleteProperty(2)"><i class="fas fa-trash"></i></button>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="section-card">
-                    <h3><i class="fas fa-chart-line"></i> التقارير والإحصائيات</h3>
-                    <p>عرض التقارير والإحصائيات المفصلة</p>
-                    <div class="quick-actions">
-                        <button class="btn-primary">تقرير شهري</button>
-                        <button class="btn-secondary">إحصائيات</button>
+            </div>
+
+            <!-- إدارة الإعلانات -->
+            <div id="ads-section" class="content-section">
+                <div class="section-header">
+                    <h2>إدارة الإعلانات</h2>
+                </div>
+
+                <div class="filter-tabs">
+                    <button class="tab-btn active" onclick="filterAds('pending')">في انتظار الموافقة <span class="badge-count">12</span></button>
+                    <button class="tab-btn" onclick="filterAds('approved')">المقبولة</button>
+                    <button class="tab-btn" onclick="filterAds('rejected')">المرفوضة</button>
+                </div>
+
+                <div class="ads-container" id="ads-container">
+                    <div class="ad-card pending">
+                        <div class="ad-header">
+                            <h3>إعلان شقة في دمشق</h3>
+                            <span class="ad-status status-pending">في انتظار الموافقة</span>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-image">
+                                <img src="https://via.placeholder.com/200x150" alt="شقة في دمشق">
+                            </div>
+                            <div class="ad-details">
+                                <p><strong>المالك:</strong> محمد أحمد</p>
+                                <p><strong>السعر:</strong> 400,000 ليرة سورية</p>
+                                <p><strong>المساحة:</strong> 100 متر مربع</p>
+                                <p><strong>تاريخ النشر:</strong> 2025-06-29</p>
+                            </div>
+                        </div>
+                        <div class="ad-actions">
+                            <button class="btn-approve" onclick="approveAd(1)">
+                                <i class="fas fa-check"></i> موافقة
+                            </button>
+                            <button class="btn-reject" onclick="rejectAd(1)">
+                                <i class="fas fa-times"></i> رفض
+                            </button>
+                            <button class="btn-view" onclick="viewAd(1)">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="ad-card pending">
+                        <div class="ad-header">
+                            <h3>إعلان مكتب تجاري</h3>
+                            <span class="ad-status status-pending">في انتظار الموافقة</span>
+                        </div>
+                        <div class="ad-content">
+                            <div class="ad-image">
+                                <img src="https://via.placeholder.com/200x150" alt="مكتب تجاري">
+                            </div>
+                            <div class="ad-details">
+                                <p><strong>المالك:</strong> سارة خالد</p>
+                                <p><strong>السعر:</strong> 800,000 ليرة سورية</p>
+                                <p><strong>المساحة:</strong> 80 متر مربع</p>
+                                <p><strong>تاريخ النشر:</strong> 2025-06-28</p>
+                            </div>
+                        </div>
+                        <div class="ad-actions">
+                            <button class="btn-approve" onclick="approveAd(2)">
+                                <i class="fas fa-check"></i> موافقة
+                            </button>
+                            <button class="btn-reject" onclick="rejectAd(2)">
+                                <i class="fas fa-times"></i> رفض
+                            </button>
+                            <button class="btn-view" onclick="viewAd(2)">
+                                <i class="fas fa-eye"></i> عرض التفاصيل
+                            </button>
+                        </div>
                     </div>
                 </div>
-                
-                <div class="section-card">
-                    <h3><i class="fas fa-cogs"></i> إعدادات النظام</h3>
-                    <p>إعدادات عامة وتخصيص الموقع</p>
-                    <div class="quick-actions">
-                        <button class="btn-primary">الإعدادات</button>
-                        <button class="btn-secondary">النسخ الاحتياطي</button>
+            </div>
+
+            <!-- الحقول الديناميكية -->
+            <div id="dynamic-fields-section" class="content-section">
+                <div class="section-header">
+                    <h2>إدارة الحقول الديناميكية</h2>
+                    <button class="btn-primary" onclick="openModal('add-field-modal')">
+                        <i class="fas fa-plus"></i> إضافة حقل جديد
+                    </button>
+                </div>
+
+                <div class="fields-container">
+                    <div class="field-card">
+                        <div class="field-header">
+                            <h3>نوع التدفئة</h3>
+                            <span class="field-type">قائمة منسدلة</span>
+                        </div>
+                        <div class="field-options">
+                            <span class="option-tag">مركزي</span>
+                            <span class="option-tag">فردي</span>
+                            <span class="option-tag">بدون</span>
+                        </div>
+                        <div class="field-actions">
+                            <button class="btn-action btn-edit" onclick="editField(1)"><i class="fas fa-edit"></i></button>
+                            <button class="btn-action btn-delete" onclick="deleteField(1)"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="field-card">
+                        <div class="field-header">
+                            <h3>عدد مواقف السيارات</h3>
+                            <span class="field-type">رقم</span>
+                        </div>
+                        <div class="field-options">
+                            <span class="option-tag">من 0 إلى 10</span>
+                        </div>
+                        <div class="field-actions">
+                            <button class="btn-action btn-edit" onclick="editField(2)"><i class="fas fa-edit"></i></button>
+                            <button class="btn-action btn-delete" onclick="deleteField(2)"><i class="fas fa-trash"></i></button>
+                        </div>
+                    </div>
+
+                    <div class="field-card">
+                        <div class="field-header">
+                            <h3>المرافق المتاحة</h3>
+                            <span class="field-type">متعدد الخيارات</span>
+                        </div>
+                        <div class="field-options">
+                            <span class="option-tag">مصعد</span>
+                            <span class="option-tag">حديقة</span>
+                            <span class="option-tag">مسبح</span>
+                            <span class="option-tag">جيم</span>
+                        </div>
+                        <div class="field-actions">
+                            <button class="btn-action btn-edit" onclick="editField(3)"><i class="fas fa-edit"></i></button>
+                            <button class="btn-action btn-delete" onclick="deleteField(3)"><i class="fas fa-trash"></i></button>
+                        </div>
                     </div>
                 </div>
-            </section>
+            </div>
+
+            <!-- الإعدادات -->
+            <div id="settings-section" class="content-section">
+                <div class="section-header">
+                    <h2>إعدادات النظام</h2>
+                </div>
+                <div class="settings-grid">
+                    <div class="setting-card">
+                        <h3>إعدادات عامة</h3>
+                        <p>إعدادات الموقع العامة</p>
+                        <button class="btn-secondary">تعديل</button>
+                    </div>
+                    <div class="setting-card">
+                        <h3>النسخ الاحتياطي</h3>
+                        <p>إدارة النسخ الاحتياطية</p>
+                        <button class="btn-secondary">إنشاء نسخة</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- التقارير -->
+            <div id="reports-section" class="content-section">
+                <div class="section-header">
+                    <h2>التقارير والإحصائيات</h2>
+                </div>
+                <div class="reports-grid">
+                    <div class="report-card">
+                        <h3>تقرير شهري</h3>
+                        <p>إحصائيات الشهر الحالي</p>
+                        <button class="btn-primary">عرض التقرير</button>
+                    </div>
+                    <div class="report-card">
+                        <h3>إحصائيات المستخدمين</h3>
+                        <p>تحليل بيانات المستخدمين</p>
+                        <button class="btn-primary">عرض الإحصائيات</button>
+                    </div>
+                </div>
+            </div>
         </main>
     </div>
+
+    <!-- النوافذ المنبثقة -->
+    <!-- إضافة مستخدم -->
+    <div id="add-user-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إضافة مستخدم جديد</h3>
+                <span class="close" onclick="closeModal('add-user-modal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>الاسم الكامل</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>البريد الإلكتروني</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>كلمة المرور</label>
+                    <input type="password" required>
+                </div>
+                <div class="form-group">
+                    <label>نوع الحساب</label>
+                    <select required>
+                        <option value="">اختر نوع الحساب</option>
+                        <option value="admin">مدير</option>
+                        <option value="user">مستخدم عادي</option>
+                    </select>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">إضافة</button>
+                    <button type="button" class="btn-secondary" onclick="closeModal('add-user-modal')">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- إضافة عقار -->
+    <div id="add-property-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إضافة عقار جديد</h3>
+                <span class="close" onclick="closeModal('add-property-modal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>عنوان العقار</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>السعر</label>
+                    <input type="number" required>
+                </div>
+                <div class="form-group">
+                    <label>المساحة (متر مربع)</label>
+                    <input type="number" required>
+                </div>
+                <div class="form-group">
+                    <label>عدد الغرف</label>
+                    <input type="number" required>
+                </div>
+                <div class="form-group">
+                    <label>الوصف</label>
+                    <textarea rows="4"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">إضافة</button>
+                    <button type="button" class="btn-secondary" onclick="closeModal('add-property-modal')">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- إضافة حقل ديناميكي -->
+    <div id="add-field-modal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3>إضافة حقل ديناميكي</h3>
+                <span class="close" onclick="closeModal('add-field-modal')">&times;</span>
+            </div>
+            <form class="modal-form">
+                <div class="form-group">
+                    <label>اسم الحقل</label>
+                    <input type="text" required>
+                </div>
+                <div class="form-group">
+                    <label>نوع الحقل</label>
+                    <select required onchange="toggleFieldOptions(this.value)">
+                        <option value="">اختر نوع الحقل</option>
+                        <option value="text">نص</option>
+                        <option value="number">رقم</option>
+                        <option value="select">قائمة منسدلة</option>
+                        <option value="checkbox">متعدد الخيارات</option>
+                    </select>
+                </div>
+                <div class="form-group" id="field-options" style="display: none;">
+                    <label>الخيارات (مفصولة بفاصلة)</label>
+                    <textarea rows="3" placeholder="خيار 1, خيار 2, خيار 3"></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="btn-primary">إضافة</button>
+                    <button type="button" class="btn-secondary" onclick="closeModal('add-field-modal')">إلغاء</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        // إدارة الأقسام
+        function showSection(sectionName) {
+            // إخفاء جميع الأقسام
+            const sections = document.querySelectorAll('.content-section');
+            sections.forEach(section => section.classList.remove('active'));
+            
+            // إظهار القسم المحدد
+            const targetSection = document.getElementById(sectionName + '-section');
+            if (targetSection) {
+                targetSection.classList.add('active');
+            }
+            
+            // تحديث عنوان الصفحة
+            const titles = {
+                'dashboard': 'لوحة القيادة',
+                'users': 'إدارة المستخدمين',
+                'properties': 'إدارة العقارات',
+                'ads': 'إدارة الإعلانات',
+                'dynamic-fields': 'الحقول الديناميكية',
+                'settings': 'الإعدادات',
+                'reports': 'التقارير'
+            };
+            document.getElementById('page-title').textContent = titles[sectionName] || 'لوحة القيادة';
+            
+            // تحديث الرابط النشط
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => link.classList.remove('active'));
+            event.target.classList.add('active');
+        }
+
+        // إدارة النوافذ المنبثقة
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+
+        // فلترة المستخدمين
+        function filterUsers(type) {
+            const tabs = document.querySelectorAll('.filter-tabs .tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            // هنا يمكن إضافة منطق الفلترة الفعلي
+            console.log('فلترة المستخدمين حسب:', type);
+        }
+
+        // فلترة العقارات
+        function filterProperties(type) {
+            const tabs = document.querySelectorAll('.filter-tabs .tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            console.log('فلترة العقارات حسب:', type);
+        }
+
+        // فلترة الإعلانات
+        function filterAds(type) {
+            const tabs = document.querySelectorAll('.filter-tabs .tab-btn');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            event.target.classList.add('active');
+            
+            console.log('فلترة الإعلانات حسب:', type);
+        }
+
+        // وظائف المستخدمين
+        function editUser(id) {
+            console.log('تعديل المستخدم:', id);
+        }
+
+        function viewUser(id) {
+            console.log('عرض المستخدم:', id);
+        }
+
+        function deleteUser(id) {
+            if (confirm('هل أنت متأكد من حذف هذا المستخدم؟')) {
+                console.log('حذف المستخدم:', id);
+            }
+        }
+
+        // وظائف العقارات
+        function editProperty(id) {
+            console.log('تعديل العقار:', id);
+        }
+
+        function viewProperty(id) {
+            console.log('عرض العقار:', id);
+        }
+
+        function deleteProperty(id) {
+            if (confirm('هل أنت متأكد من حذف هذا العقار؟')) {
+                console.log('حذف العقار:', id);
+            }
+        }
+
+        // وظائف الإعلانات
+        function approveAd(id) {
+            if (confirm('هل تريد الموافقة على هذا الإعلان؟')) {
+                console.log('موافقة على الإعلان:', id);
+            }
+        }
+
+        function rejectAd(id) {
+            if (confirm('هل تريد رفض هذا الإعلان؟')) {
+                console.log('رفض الإعلان:', id);
+            }
+        }
+
+        function viewAd(id) {
+            console.log('عرض الإعلان:', id);
+        }
+
+        // وظائف الحقول الديناميكية
+        function editField(id) {
+            console.log('تعديل الحقل:', id);
+        }
+
+        function deleteField(id) {
+            if (confirm('هل أنت متأكد من حذف هذا الحقل؟')) {
+                console.log('حذف الحقل:', id);
+            }
+        }
+
+        // إظهار/إخفاء خيارات الحقل حسب النوع
+        function toggleFieldOptions(fieldType) {
+            const optionsDiv = document.getElementById('field-options');
+            if (fieldType === 'select' || fieldType === 'checkbox') {
+                optionsDiv.style.display = 'block';
+            } else {
+                optionsDiv.style.display = 'none';
+            }
+        }
+
+        // إغلاق النافذة المنبثقة عند النقر خارجها
+        window.onclick = function(event) {
+            const modals = document.querySelectorAll('.modal');
+            modals.forEach(modal => {
+                if (event.target === modal) {
+                    modal.style.display = 'none';
+                }
+            });
+        }
+
+        // تهيئة الصفحة
+        document.addEventListener('DOMContentLoaded', function() {
+            // إظهار لوحة القيادة افتراضياً
+            showSection('dashboard');
+        });
+    </script>
 </body>
 </html>
-
