@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم المسؤول</title>
+    <link rel="stylesheet" href="admin-style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="admin-container">
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>لوحة التحكم</h2>
+            </div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a href="#dashboard"><i class="fas fa-tachometer-alt"></i> لوحة القيادة</a></li>
+                    <li><a href="#users"><i class="fas fa-users"></i> إدارة المستخدمين</a></li>
+                    <li><a href="#properties"><i class="fas fa-building"></i> إدارة العقارات</a></li>
+                    <li><a href="#ads"><i class="fas fa-ad"></i> إدارة الإعلانات</a></li>
+                    <li><a href="#settings"><i class="fas fa-cogs"></i> الإعدادات</a></li>
+                    <li><a href="#reports"><i class="fas fa-chart-line"></i> التقارير</a></li>
+                </ul>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <header class="admin-header">
+                <h1>لوحة القيادة</h1>
+                <div class="user-info">
+                    <span>مرحباً، المسؤول</span>
+                    <i class="fas fa-user-circle"></i>
+                </div>
+            </header>
+            <section class="dashboard-cards">
+                <div class="card">
+                    <h3>إجمالي المستخدمين</h3>
+                    <p>1,234</p>
+                </div>
+                <div class="card">
+                    <h3>العقارات النشطة</h3>
+                    <p>567</p>
+                </div>
+                <div class="card">
+                    <h3>الإعلانات المعلقة</h3>
+                    <p>89</p>
+                </div>
+                <div class="card">
+                    <h3>الزيارات اليومية</h3>
+                    <p>12,345</p>
+                </div>
+            </section>
+            <section class="recent-activity">
+                <h2>النشاطات الأخيرة</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>النوع</th>
+                            <th>الوصف</th>
+                            <th>التاريخ</th>
+                            <th>الإجراءات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>تسجيل جديد</td>
+                            <td>تم تسجيل مستخدم جديد: أحمد محمد</td>
+                            <td>2025-06-29</td>
+                            <td><button class="btn-view">عرض</button></td>
+                        </tr>
+                        <tr>
+                            <td>إعلان جديد</td>
+                            <td>تم إضافة عقار جديد: شقة في دمشق</td>
+                            <td>2025-06-29</td>
+                            <td><button class="btn-approve">موافقة</button> <button class="btn-reject">رفض</button></td>
+                        </tr>
+                        <tr>
+                            <td>تحديث عقار</td>
+                            <td>تم تحديث عقار: فيلا في حلب</td>
+                            <td>2025-06-28</td>
+                            <td><button class="btn-view">عرض</button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+            
+            <section class="management-sections">
+                <div class="section-card">
+                    <h3><i class="fas fa-users"></i> إدارة المستخدمين</h3>
+                    <p>إدارة حسابات المستخدمين والصلاحيات</p>
+                    <div class="quick-actions">
+                        <button class="btn-primary">إضافة مستخدم</button>
+                        <button class="btn-secondary">عرض الكل</button>
+                    </div>
+                </div>
+                
+                <div class="section-card">
+                    <h3><i class="fas fa-building"></i> إدارة العقارات</h3>
+                    <p>إدارة العقارات والإعلانات المنشورة</p>
+                    <div class="quick-actions">
+                        <button class="btn-primary">إضافة عقار</button>
+                        <button class="btn-secondary">عرض الكل</button>
+                    </div>
+                </div>
+                
+                <div class="section-card">
+                    <h3><i class="fas fa-chart-line"></i> التقارير والإحصائيات</h3>
+                    <p>عرض التقارير والإحصائيات المفصلة</p>
+                    <div class="quick-actions">
+                        <button class="btn-primary">تقرير شهري</button>
+                        <button class="btn-secondary">إحصائيات</button>
+                    </div>
+                </div>
+                
+                <div class="section-card">
+                    <h3><i class="fas fa-cogs"></i> إعدادات النظام</h3>
+                    <p>إعدادات عامة وتخصيص الموقع</p>
+                    <div class="quick-actions">
+                        <button class="btn-primary">الإعدادات</button>
+                        <button class="btn-secondary">النسخ الاحتياطي</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
+
